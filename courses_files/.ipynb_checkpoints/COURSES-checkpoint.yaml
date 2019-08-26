@@ -1,0 +1,45 @@
+CSE:
+    - SEMESTER_01:
+        BSC101A: Engineering Mathematics - 1
+        BSC102B: Engineering Physics
+        ESC101A: Elements of Mechanical Engineering
+        ESC102A: Elements of Electronics Engineering
+        HSC101B: Sociology
+        MCC101B: Technical Communication
+    - SEMESTER_02:
+        BSC104A: Engineering Mathematics - 2
+        BSC105B: Engineering Chemistry
+        ESC106A: Construction Materials and Engineering Mechanics
+        ESC107A: Elements of Electrical Engineering
+        ESC108A: Elements of CSE
+        MCC102A: Environmental Studies
+    - SEMESTER_03:
+        BSC207A: Engineering Mathematics - 3
+        CSC201A: Discrete Mathematics - 1
+        CSC202A: DSA
+        CSC203A: Logic Design
+        CSC204A: Advanced Programming Concepts
+        MCC201B: Human Rights
+    - SEMESTER_04:
+        BSC208A: Engineering Mathematics - 4
+        ECC201A: Signals and Systems
+        CSC209A: DAA
+        CSC210A: SDF
+        CSC211A: FLAT
+        CSC212A: Data Communication
+        HSC201A: Law for Engineers
+    - SEMESTER_05:
+        CSC301A: Discrete Mathematics - 2
+        CSC302A: Operating Systems
+        CSC303A: Computer Networks
+        CSC304A: Computer Simulation
+        CSC305A: PLP
+        HSC301A: Economics for Engineers
+    - SEMESTER_06:
+        CSC309A: Computer Graphics
+        CSC310A: Compilers
+        CSC311A: Database Systems
+    - SEMESTER_07:
+        CSC401A: Computational Intelligence
+        CSC402A: Web Architecture
+        

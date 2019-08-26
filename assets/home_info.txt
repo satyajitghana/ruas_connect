@@ -1,0 +1,13 @@
+Instructions
+1. I know my color scheme is bad, i'll try to fix it in future builds, any suggestions are welcome.
+2. Since this is an alpha build, lots of bugs are expected, report them to dev
+3. Any feature requests ? contact the dev
+4.1 Courses => You'll find your course subjects here
+4.2 Messages => You can group chat here
+4.3 Updates => Announcement will be made here, do checkout this page for developer contact information
+5.1 Notes => Upload your notes pdf here
+5.2 Questions => Upload question papers pdf here
+5.3 Assignments => Upload Assignment Questions/Solutions pdf here
+6. Would you like to contribute to this project ? contact the dev
+7. Who's the dev ? :) its me, see the Updates Screen
+8. Any more points ? Nope :) Happy RUASConnecting ? >.<
