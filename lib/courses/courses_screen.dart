@@ -3,6 +3,7 @@ import 'package:ruas_connect/repository/respository.dart';
 import 'package:bloc/bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:ruas_connect/courses/bloc/bloc.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'courses.dart';
 import 'package:ruas_connect/models/models.dart';
 import 'package:ruas_connect/authentication_bloc/bloc.dart' as AuthBloc;
@@ -68,21 +69,47 @@ class CoursesCards extends StatelessWidget {
 
         if (state is CoursesLoaded) {
           // return Text((state.coursesList).toString());
-          List<Widget> courses = [];
-          state.coursesList.forEach((key, val) {
-            courses.add(CourseCard(
-              courseCode: key,
-              courseName: val,
-            ));
-          });
+//          List<Widget> courses = [];
+//          state.coursesList.map((doc) {
+//            return CourseCard(
+//              courseCode: doc.documentID,
+//              courseName: doc.data['title'],
+//              driveLink: doc.data['driveLink'],
+//            );
+//          });
 
-          return Container(
-            padding: EdgeInsets.all(5.0),
-            color: Colors.black12,
-            child: Column(
-              children: courses,
-            ),
+//          state.coursesList.forEach((key, val) {
+//            courses.add(CourseCard(
+//              courseCode: key,
+//              courseName: val,
+//            ));
+//          });
+
+          return ListView(
+            padding: const EdgeInsets.all(5.0),
+            children: state.coursesList.map((doc) {
+              return CourseCard(
+                courseCode: doc.documentID,
+                courseName: doc.data['title'],
+                driveLink: doc.data['driveLink'],
+              );
+            }).toList(),
           );
+
+
+//            Container(
+//            padding: EdgeInsets.all(5.0),
+//            color: Colors.black12,
+//            child: Column(
+//              children: state.coursesList.map((doc) {
+//                return CourseCard(
+//                  courseCode: doc.documentID,
+//                  courseName: doc.data['title'],
+//                  driveLink: doc.data['driveLink'],
+//                );
+//              }).toList(),
+//            ),
+//          );
         }
 
         if (state is CoursesLoadError) {
@@ -96,9 +123,9 @@ class CoursesCards extends StatelessWidget {
 }
 
 class CourseCard extends StatelessWidget {
-  final String courseCode, courseName;
+  final String courseCode, courseName, driveLink;
 
-  const CourseCard({Key key, this.courseCode, this.courseName})
+  const CourseCard({Key key, this.courseCode, this.courseName, this.driveLink})
       : super(key: key);
 
   @override
@@ -106,12 +133,15 @@ class CourseCard extends StatelessWidget {
     return Card(
       child: InkWell(
         onTap: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => CourseArena(courseCode: courseCode),
-            ),
-          );
+          /// Navigate to the [driveLink]
+          launch(driveLink);
+
+//          Navigator.push(
+//            context,
+//            MaterialPageRoute(
+//              builder: (context) => CourseArena(courseCode: courseCode),
+//            ),
+//          );
         },
         child: Container(
           child: ListTile(

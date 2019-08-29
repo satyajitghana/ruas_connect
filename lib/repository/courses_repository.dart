@@ -34,14 +34,12 @@ class CoursesRepository {
     return (await query.getDocuments()).documents;
   }
 
-  Future<Map<String, String>> getCoursesOf(
+  Future<List<DocumentSnapshot>> getCoursesOf(
       String branch, String semester) async {
-    final coursesRef = Firestore.instance
-        .collection('branch/$branch/$semester')
-        .document('courses');
-    final courses = await coursesRef.get();
-    print(courses.data['course_list']);
-    return Map<String, String>.from(courses.data['course_list']);
+    final coursesListCollection = Firestore.instance
+        .collection('branch/$branch/$semester').reference();
+    final courses = await coursesListCollection.getDocuments();
+    return courses.documents;
   }
 
   static Future<void> writeArenaFile(

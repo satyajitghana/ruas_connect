@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:bloc/bloc.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:ruas_connect/repository/respository.dart';
 import './bloc.dart';
 import 'package:meta/meta.dart';
@@ -23,7 +24,7 @@ class CoursesBloc extends Bloc<CoursesEvent, CoursesState> {
       try {
         String branch = event.branch;
         String semester = event.semester;
-        Map<String, String> coursesList =
+        List<DocumentSnapshot> coursesList =
             await _coursesRepository.getCoursesOf(branch, semester);
         yield CoursesLoaded(coursesList: coursesList);
       } catch (_) {

@@ -63,9 +63,6 @@ class App extends StatelessWidget {
       home: BlocBuilder(
         bloc: BlocProvider.of<AuthenticationBloc>(context),
         builder: (BuildContext context, AuthenticationState state) {
-          if (state is Uninitialized) {
-            return SplashScreen();
-          }
           if (state is Authenticated) {
             if (state.isEmailVerified) {
               return MainArenaPage();
@@ -87,6 +84,7 @@ class App extends StatelessWidget {
               email: state.email,
             );
           }
+          return SplashScreen();
         },
       ),
     );

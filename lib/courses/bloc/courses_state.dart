@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:equatable/equatable.dart';
 import 'package:meta/meta.dart';
 
@@ -11,9 +12,9 @@ class Uninitialized extends CoursesState {}
 class CoursesLoading extends CoursesState {}
 
 class CoursesLoaded extends CoursesState {
-  final Map<String, String> coursesList;
+  final List<DocumentSnapshot> coursesList;
 
-  CoursesLoaded({@required Map<String, String> coursesList})
+  CoursesLoaded({@required List<DocumentSnapshot> coursesList})
       : assert(coursesList != null),
         coursesList = coursesList,
         super([coursesList]);
