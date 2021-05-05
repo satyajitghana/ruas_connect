@@ -1,16 +1,11 @@
-# ruas_connect
+# RUAS Connect
 
-A new Flutter project.
+## Screenshots
 
-## Getting Started
+![s1](screenshots/Screenshot_2021-05-05-15-34-03-329_com.example.ruas_connect.jpg)
+![s2](screenshots/Screenshot_2021-05-05-15-34-06-856_com.example.ruas_connect.jpg)
+![s3](screenshots/Screenshot_2021-05-05-15-34-15-358_com.example.ruas_connect.jpg)
+![s4](screenshots/Screenshot_2021-05-05-15-34-18-373_com.example.ruas_connect.jpg)
+![s5](screenshots/Screenshot_2021-05-05-15-34-21-365_com.example.ruas_connect.jpg)
+![s6](screenshots/Screenshot_2021-05-05-15-34-28-021_com.example.ruas_connect.jpg)
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
